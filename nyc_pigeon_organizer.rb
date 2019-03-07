@@ -13,9 +13,8 @@ def nyc_pigeon_organizer(data)
           if !ans[name]
             ans[name] = {}
           end 
-          binding.pry
-          if !ans[name][x]
-            ans[name][x] = []
+          if !ans[name][ans[y-1]]
+            ans[name][ans[y-1]] = []
           elsif !ans[name][x].include?(desc.to_s)
             ans[name][x] << desc.to_s
           end

@@ -4,7 +4,7 @@ def nyc_pigeon_organizer(data)
   ans = Hash.new
   
   data_1d = data.flatten
-  data_1d.each {|x|
+  data_1d.each_with_index {|x,y|
     if x.is_a?(Symbol)
       next
     elsif x.is_a?(Hash)
